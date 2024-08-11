@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.main--container{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start; /* Alinea el contenido horizontalmente al inicio (izquierda) */
+    align-items: flex-start; /* Alinea el contenido verticalmente al inicio (arriba) */
+    padding: 20px; /* Añade un pequeño padding para que no toque el borde */
+    pointer-events: none;
+}
+
+.main--title{
+    color: white;
+    font-size: 5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, cursive;
+    font-weight: 100;
+    line-height: 1.1em;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    margin: 0; /* Elimina márgenes externos */
+}
+
+.main--title.ended{
+    opacity: 1;
+    mix-blend-mode: soft-light;
+}
+
+.main--title.ended:after {
+    color: rgb(0, 255, 255); 
+}
+
+@media only screen and (max-width: 1200px) {
+    .main--title{
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main--title{
+        font-size: 3em;
+        line-height: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main--title{
+        font-size: 2em;
+        line-height: 1em;
+    }
+}
