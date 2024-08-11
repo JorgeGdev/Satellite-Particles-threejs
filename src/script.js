@@ -72,7 +72,7 @@ function transformMesh(){
     pointsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
 
     const pointsMaterial = new THREE.PointsMaterial({
-        color: 0x5c0b17,
+        color: 0xFFCC4F,
         size: 0.1,
         blending: THREE.AdditiveBlending,
         transparent: true,
